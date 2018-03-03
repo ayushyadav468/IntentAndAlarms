@@ -3,6 +3,7 @@ package com.example.ayushyadav.intentandalarms;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private void callUs(){
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_CALL);
+        shareIntent.setData(Uri.parse("tel:+918447410671"));
+        startActivity(shareIntent);
 
     }
 }
